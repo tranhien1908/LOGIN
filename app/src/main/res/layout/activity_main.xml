@@ -7,20 +7,19 @@
     android:background="#F2F5F9"
     tools:context=".MainActivity">
 
-    <!-- Logo -->
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:src="@drawable/ic_launcher_foreground"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/bg_circle"
         android:contentDescription="@string/app_name"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_launcher_foreground"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/bg_circle" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Tiêu đề -->
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
@@ -34,24 +33,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp" />
 
-    <!-- Ô nhập Username -->
     <EditText
         android:id="@+id/edtUsername"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:hint="Tên đăng nhập"
-        android:padding="12dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
         android:background="@drawable/bg_input"
         android:drawableStart="@android:drawable/ic_menu_edit"
+        android:hint="Tên đăng nhập"
         android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@id/txtTitle"
-        app:layout_constraintStart_toStartOf="parent"
+        android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="40dp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle" />
 
-    <!-- Ô nhập Password -->
     <EditText
         android:id="@+id/edtPassword"
         android:layout_width="0dp"
@@ -70,29 +68,33 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_width="208dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/bg_button"
         android:text="Đăng nhập"
         android:textColor="@android:color/white"
-        android:background="@drawable/bg_button"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/edtPassword"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="24dp" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtPassword" />
 
-    <TextView
-        android:id="@+id/txtSignup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bạn chưa có tài khoản? Đăng ký ngay"
-        android:textSize="14sp"
-        android:textColor="#555"
-        app:layout_constraintTop_toBottomOf="@id/btnLogin"
-        app:layout_constraintStart_toStartOf="parent"
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="210dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="Đăng ký"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
